@@ -1,0 +1,23 @@
+
+
+	<TABLE  id='{{this.getComponentId()}}' class='table striped hovered border bordered margin10 no-margin-right'  >
+	<THEAD>
+			<TR><TD> </TD>				
+			 <TH *ngFor="let item of this.listOfColumns; let row = index" >{{item.header}}</TH>
+           	</TR>
+           	
+    </THEAD>
+    <TBODY>
+  	<TR *ngFor="let row of this.children | async; let rowIndex = index" class='{{this.marke(row)}}'>
+				<TD  (click)="this.setCurrentPosition(rowIndex)"  >{{rowIndex}}</TD>
+				<TD *ngFor="let columnLabel of this.listOfColumns;" >{{this.wert(row,columnLabel.name)}}</TD>
+				
+	</TR>
+
+				
+	</TBODY>
+	
+	
+	</TABLE>
+ 
+

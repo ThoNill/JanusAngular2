@@ -1,0 +1,27 @@
+input[type='button']:focus {
+	background-color: lime;
+}
+
+input:focus {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+	background-color: rgb(240, 240, 240);
+}
+
+.hbox {
+     display: -webkit-flex;
+     -webkit-flex-direction: row;
+     align-items: center;
+	
+	 display: flex;
+     flex-direction: row;
+}
+
+.vbox {
+    display: -webkit-flex;
+      -webkit-flex-direction: column;
+    align-items: flex-start;
+
+	
+	 display: flex;
+     flex-direction: column;
+}

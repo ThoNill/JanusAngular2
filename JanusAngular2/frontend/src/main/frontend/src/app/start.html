@@ -1,0 +1,100 @@
+<DIALOG title="{{title}}" >
+
+<STRING name="o" default="oo"></STRING>
+
+<MAPTABLE name="firstMap" >
+  <ENTRY value="1" text="eins"> </ENTRY>
+  <ENTRY value="2" text="zwei"> </ENTRY>
+  <ENTRY value="3" text="drei"> </ENTRY>
+</MAPTABLE>
+
+<MUTABLE name="abfrage" abfrageText="api/mfisher/bookmarks/" >
+  <MUCOLUMN name="id" ></MUCOLUMN>
+  <MUCOLUMN name="uri" ></MUCOLUMN>
+  <MUCOLUMN name="description" ></MUCOLUMN>
+</MUTABLE>
+
+
+<MUTABLE name="abfrage2" abfrageText="api/mfisher/testlisten?feldliste=name,strasse" >
+  <MUCOLUMN name="name" ></MUCOLUMN>
+  <MUCOLUMN name="strasse" ></MUCOLUMN>
+</MUTABLE>
+
+  
+<MENUBAR>
+		<MENU title='Beispiele'>
+			<MENUITEM title='Eingabefelder' model='textfield' ></MENUITEM>
+			<MENUITEM title='Auswahl' model='maptable' ></MENUITEM>
+			<MENUITEM title='Tabulatoren' model='tabs' ></MENUITEM>
+			<MENUITEM title='Aktionen' model='actions' ></MENUITEM>
+			<MENUITEM title='Regeln' model='rules' ></MENUITEM>
+			<MENUITEM title='Rezepte' model='rezepte' ></MENUITEM>
+		</MENU>
+</MENUBAR>
+
+<my-BUTTON model='speichernClearFields' title='Speichern' ></my-BUTTON>
+
+<!-- 
+	Das ist ein Text
+	<input [(ngModel)]='title' />
+-->
+
+	<VBOX>
+
+<LABEL title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></LABEL>
+<LABEL title='Zeilenzahl = {{abfrage2.rowCount|async}}'></LABEL>
+<LABEL title='Name = {{abfrage2.name|async}}'></LABEL>
+
+<SHOWTABLE model="abfrage2"  >
+  <COLUMN name="name" header="Name" ></COLUMN>
+  <COLUMN name="strasse" header="Strasse" ></COLUMN>
+</SHOWTABLE>
+
+ 
+<SHOWTABLE model="abfrage"  >
+  <COLUMN name="id" header="Id" ></COLUMN>
+  <COLUMN name="uri" header="Uri" ></COLUMN>
+  <COLUMN name="description" header="Beschreibung"></COLUMN>
+</SHOWTABLE>
+
+<LABEL title='Aktuelle Position der nachfolgenden Tabelle = {{firstMap.currentPosition|async}}'></LABEL>
+<LABEL title='Zeilenzahl= {{firstMap.rowCount|async}}'></LABEL>
+<LABEL title='Wert = {{firstMap.value|async}} '></LABEL>
+
+<SHOWTABLE model="firstMap"  >
+  <COLUMN name="value" header="Wert" ></COLUMN>
+  <COLUMN name="text" header="Text" ></COLUMN>
+</SHOWTABLE>
+
+
+	<HBOX>
+	 <COMBO model="firstMap" ></COMBO>
+	 <LIST model="firstMap" ></LIST>
+	 <RADIO model="firstMap" ></RADIO>
+	</HBOX>
+	<!-- 
+		<HBOX>
+			<LABEL title='eins'></LABEL>
+			<TEXTFIELD model='ort' value='1'></TEXTFIELD>
+            {{ort}}
+            {{o}}
+			<LABEL title='zwei'></LABEL>
+			{{username}}
+		</HBOX>
+	
+
+ 	
+	<TABS>
+			<TAB title='Tab a'>
+				<TEXTFIELD model='o' value="1"></TEXTFIELD>
+			</TAB>
+			<TAB title='Tab b'>
+			<LABEL title='zwei'></LABEL>
+
+			</TAB>
+		</TABS>
+	-->
+	
+	</VBOX>
+			
+</DIALOG>
