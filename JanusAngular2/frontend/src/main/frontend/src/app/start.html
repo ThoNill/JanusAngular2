@@ -1,100 +1,100 @@
-<DIALOG title="{{title}}" >
+<app-dialog title="{{title}}" >
 
-<STRING name="o" default="oo"></STRING>
+<app-string name="o" default="oo"></app-string>
 
-<MAPTABLE name="firstMap" >
-  <ENTRY value="1" text="eins"> </ENTRY>
-  <ENTRY value="2" text="zwei"> </ENTRY>
-  <ENTRY value="3" text="drei"> </ENTRY>
-</MAPTABLE>
+<app-maptable name="firstMap" >
+  <app-entry value="1" text="eins"> </app-entry>
+  <app-entry value="2" text="zwei"> </app-entry>
+  <app-entry value="3" text="drei"> </app-entry>
+</app-maptable>
 
-<MUTABLE name="abfrage" abfrageText="api/mfisher/bookmarks/" >
-  <MUCOLUMN name="id" ></MUCOLUMN>
-  <MUCOLUMN name="uri" ></MUCOLUMN>
-  <MUCOLUMN name="description" ></MUCOLUMN>
-</MUTABLE>
+<app-mutable name="abfrage" abfrageText="api/mfisher/bookmarks/" >
+  <app-mucolumn name="id" ></app-mucolumn>
+  <app-mucolumn name="uri" ></app-mucolumn>
+  <app-mucolumn name="description" ></app-mucolumn>
+</app-mutable>
 
 
-<MUTABLE name="abfrage2" abfrageText="api/mfisher/testlisten?feldliste=name,strasse" >
-  <MUCOLUMN name="name" ></MUCOLUMN>
-  <MUCOLUMN name="strasse" ></MUCOLUMN>
-</MUTABLE>
+<app-mutable name="abfrage2" abfrageText="api/mfisher/testlisten?feldliste=name,strasse" >
+  <app-mucolumn name="name" ></app-mucolumn>
+  <app-mucolumn name="strasse" ></app-mucolumn>
+</app-mutable>
 
   
-<MENUBAR>
-		<MENU title='Beispiele'>
-			<MENUITEM title='Eingabefelder' model='textfield' ></MENUITEM>
-			<MENUITEM title='Auswahl' model='maptable' ></MENUITEM>
-			<MENUITEM title='Tabulatoren' model='tabs' ></MENUITEM>
-			<MENUITEM title='Aktionen' model='actions' ></MENUITEM>
-			<MENUITEM title='Regeln' model='rules' ></MENUITEM>
-			<MENUITEM title='Rezepte' model='rezepte' ></MENUITEM>
-		</MENU>
-</MENUBAR>
+<app-menubar>
+		<app-menu title='Beispiele'>
+			<app-menuitem title='Eingabefelder' model='textfield' ></app-menuitem>
+			<app-menuitem title='Auswahl' model='maptable' ></app-menuitem>
+			<app-menuitem title='Tabulatoren' model='tabs' ></app-menuitem>
+			<app-menuitem title='Aktionen' model='actions' ></app-menuitem>
+			<app-menuitem title='Regeln' model='rules' ></app-menuitem>
+			<app-menuitem title='Rezepte' model='rezepte' ></app-menuitem>
+		</app-menu>
+</app-menubar>
 
-<my-BUTTON model='speichernClearFields' title='Speichern' ></my-BUTTON>
+<app-button model='speichernClearFields' title='Speichern' ></app-button>
 
 <!-- 
 	Das ist ein Text
 	<input [(ngModel)]='title' />
 -->
 
-	<VBOX>
+	<app-vbox>
 
-<LABEL title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></LABEL>
-<LABEL title='Zeilenzahl = {{abfrage2.rowCount|async}}'></LABEL>
-<LABEL title='Name = {{abfrage2.name|async}}'></LABEL>
+<app-label title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></app-label>
+<app-label title='Zeilenzahl = {{abfrage2.rowCount|async}}'></app-label>
+<app-label title='Name = {{abfrage2.name|async}}'></app-label>
 
-<SHOWTABLE model="abfrage2"  >
-  <COLUMN name="name" header="Name" ></COLUMN>
-  <COLUMN name="strasse" header="Strasse" ></COLUMN>
-</SHOWTABLE>
+<app-showtable model="abfrage2"  >
+  <app-column name="name" header="Name" ></app-column>
+  <app-column name="strasse" header="Strasse" ></app-column>
+</app-showtable>
 
  
-<SHOWTABLE model="abfrage"  >
-  <COLUMN name="id" header="Id" ></COLUMN>
-  <COLUMN name="uri" header="Uri" ></COLUMN>
-  <COLUMN name="description" header="Beschreibung"></COLUMN>
-</SHOWTABLE>
+<app-showtable model="abfrage"  >
+  <app-column name="id" header="Id" ></app-column>
+  <app-column name="uri" header="Uri" ></app-column>
+  <app-column name="description" header="Beschreibung"></app-column>
+</app-showtable>
 
-<LABEL title='Aktuelle Position der nachfolgenden Tabelle = {{firstMap.currentPosition|async}}'></LABEL>
-<LABEL title='Zeilenzahl= {{firstMap.rowCount|async}}'></LABEL>
-<LABEL title='Wert = {{firstMap.value|async}} '></LABEL>
+<app-label title='Aktuelle Position der nachfolgenden Tabelle = {{firstMap.currentPosition|async}}'></app-label>
+<app-label title='Zeilenzahl= {{firstMap.rowCount|async}}'></app-label>
+<app-label title='Wert = {{firstMap.value|async}} '></app-label>
 
-<SHOWTABLE model="firstMap"  >
-  <COLUMN name="value" header="Wert" ></COLUMN>
-  <COLUMN name="text" header="Text" ></COLUMN>
-</SHOWTABLE>
+<app-showtable model="firstMap"  >
+  <app-column name="value" header="Wert" ></app-column>
+  <app-column name="text" header="Text" ></app-column>
+</app-showtable>
 
 
-	<HBOX>
-	 <COMBO model="firstMap" ></COMBO>
-	 <LIST model="firstMap" ></LIST>
-	 <RADIO model="firstMap" ></RADIO>
-	</HBOX>
+	<app-hbox>
+	 <app-combo model="firstMap" ></app-combo>
+	 <app-list model="firstMap" ></app-list>
+	 <app-radio model="firstMap" ></app-radio>
+	</app-hbox>
 	<!-- 
-		<HBOX>
-			<LABEL title='eins'></LABEL>
-			<TEXTFIELD model='ort' value='1'></TEXTFIELD>
+		<app-hbox>
+			<app-label title='eins'></app-label>
+			<app-textfield model='ort' value='1'></app-textfield>
             {{ort}}
             {{o}}
-			<LABEL title='zwei'></LABEL>
+			<app-label title='zwei'></app-label>
 			{{username}}
-		</HBOX>
+		</app-hbox>
 	
 
  	
-	<TABS>
-			<TAB title='Tab a'>
-				<TEXTFIELD model='o' value="1"></TEXTFIELD>
-			</TAB>
-			<TAB title='Tab b'>
-			<LABEL title='zwei'></LABEL>
+	<app-tabs>
+			<app-tab title='Tab a'>
+				<app-textfield model='o' value="1"></app-textfield>
+			</app-tab>
+			<app-tab title='Tab b'>
+			<app-label title='zwei'></app-label>
 
-			</TAB>
-		</TABS>
+			</app-tab>
+		</app-tabs>
 	-->
 	
-	</VBOX>
+	</app-vbox>
 			
-</DIALOG>
+</app-dialog>

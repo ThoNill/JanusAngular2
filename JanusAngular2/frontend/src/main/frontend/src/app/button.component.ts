@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
 
 @Component({
-  selector: 'my-BUTTON',
+  selector: 'app-button',
   template: `<div class='margin10 no-margin-right' style='{{styleOut}}' ><button  (click)="followLink($events)"  >{{title}}</button></div>` 
 })
 export class ButtonComponent  { 

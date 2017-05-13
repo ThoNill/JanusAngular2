@@ -4,7 +4,7 @@ import { AppComponent }  from './app.component';
 import { MaptableComponent }  from './maptable.component';
 
 @Component({
-  selector: 'ENTRY',
+  selector: 'app-entry',
   template: `<div>{{value}} ==&gt; {{text}}</div> `,
 })
 

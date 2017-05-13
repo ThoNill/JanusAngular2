@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { TabComponent }  from './tab.component';
 
 @Component({
-  selector: 'TABS',
+  selector: 'app-tabs',
   template: `
   
   <DIV class='tabcontrol2' data-role='tabcontrol'  data-save-state='true'  >

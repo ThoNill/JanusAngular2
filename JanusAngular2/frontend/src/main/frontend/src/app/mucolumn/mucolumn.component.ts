@@ -4,7 +4,7 @@ import { MutableComponent } from '../mutable/mutable.component';
 
 
 @Component({
-  selector: 'MUCOLUMN',
+  selector: 'app-mucolumn',
   templateUrl: './mucolumn.component.html',
   styleUrls: ['./mucolumn.component.css']
 })

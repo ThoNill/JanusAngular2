@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
 
 @Component({
-  selector: 'MENUITEM',
+  selector: 'app-menuitem',
   template: `<li   style='{{styleOut}}' ><a href='#' (click)="followLink()" >{{title}}</a></li>`,
 })
 

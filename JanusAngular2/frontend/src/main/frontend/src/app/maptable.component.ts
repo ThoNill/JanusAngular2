@@ -8,7 +8,7 @@ import { TableColumnDescription}  from './TableColumnDescription';
 // <DIV>Map: {{name}} <DIV><ng-content></ng-content></DIV></DIV>
 
 @Component({
-  selector: 'MAPTABLE',
+  selector: 'app-maptable',
   template: ``,
 })
 

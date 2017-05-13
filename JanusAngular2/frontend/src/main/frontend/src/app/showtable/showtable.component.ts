@@ -9,7 +9,7 @@ import { TableViewBasis }  from '../TableViewBasis';
 import { TableItem }  from '../TableItem';
 
 @Component({
-  selector: 'SHOWTABLE',
+  selector: 'app-showtable',
   templateUrl: './showtable.component.html',
   styleUrls: ['./showtable.component.css']
 })

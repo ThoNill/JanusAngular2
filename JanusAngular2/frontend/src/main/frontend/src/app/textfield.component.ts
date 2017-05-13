@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
 
 @Component({
-  selector: 'TEXTFIELD',
+  selector: 'app-textfield',
   template: `<div  class='input-control text  margin10 no-margin-right ' >
                <input type='text' id='{{model}}' name='{{model}}' value='{{value}}'   
                #box (keyup.enter)="update(box.value)" (blur)="update(box.value)"   > 

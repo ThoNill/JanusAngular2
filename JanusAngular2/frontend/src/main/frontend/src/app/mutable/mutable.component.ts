@@ -9,7 +9,7 @@ import { TableColumnDescription}  from '../TableColumnDescription';
 
 
 @Component({
-  selector: 'MUTABLE',
+  selector: 'app-mutable',
   templateUrl: './mutable.component.html',
   styleUrls: ['./mutable.component.css']
 })

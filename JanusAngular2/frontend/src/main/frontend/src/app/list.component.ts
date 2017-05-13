@@ -7,7 +7,7 @@ import { TableViewBasis }  from './TableViewBasis';
 
 
 @Component({
-  selector: 'LIST',
+  selector: 'app-list',
   template: ` <div   id="this.getComponentId()" class='listview set-border'   >
                   <div class='list' *ngFor="let item of this.children|async; let rowIndex = index;" (dblclick)="this.setCurrentPosition(rowIndex)" ><span  class='{{this.marke(item)}}'>{{item.text}}</span></div>
              </div>`,

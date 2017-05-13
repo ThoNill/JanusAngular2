@@ -3,7 +3,7 @@ import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
 
 @Component({
-  selector: 'STRING',
+  selector: 'app-string',
   template: ``, //<div>{{name}} = {{value}} : {{defValue}}</div> `,
 })
 

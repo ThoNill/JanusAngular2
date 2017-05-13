@@ -6,7 +6,7 @@ import { MaptableComponent }  from './maptable.component';
 import { TableViewBasis }  from './TableViewBasis';
 
 @Component({
-  selector: 'COMBO',
+  selector: 'app-combo',
   template: `<div id="this.getComponentId()"  class='input-control select'>
                  <select name='{{name}}'  #sel (change)="this.setCurrentPosition(sel.value)" > 
                    <option *ngFor="let item of this.children|async; let rowIndex = index; "  (change)="this.setCurrentPosition(rowIndex)" value='{{rowIndex}}' selected='{{this.marke(item)}}' >{{item.text}} </option>

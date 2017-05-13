@@ -8,7 +8,7 @@ import { TableViewBasis }  from './TableViewBasis';
 
 
 @Component({
-  selector: 'RADIO',
+  selector: 'app-radio',
   template: ` <div id="this.getComponentId()" >
   <label *ngFor="let item of this.children|async; let row = index"  class='input-control radio small-check'   ><input type='radio' name='{{name}}' (click)="this.setCurrentPosition(row)" checked='{{this.marke(item)}}' value='{{row}}'/> <span class='check'></span><span class='caption'>{{item.text}}</span></label>
              </div>`,

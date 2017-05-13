@@ -4,7 +4,7 @@ import { ShowtableComponent } from '../showtable/showtable.component';
 
 
 @Component({
-  selector: 'COLUMN',
+  selector: 'app-column',
   templateUrl: './column.component.html',
   styleUrls: ['./column.component.css']
 })

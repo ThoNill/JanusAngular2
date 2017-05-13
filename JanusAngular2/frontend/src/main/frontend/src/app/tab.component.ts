@@ -5,7 +5,7 @@ import { TabsComponent }  from './tabs.component';
 // [hidden]="!active"
 
 @Component({
-  selector: 'TAB',
+  selector: 'app-tab',
   template: `
    <div class='frame' [style.display]="active?'inherit':'none'" >
        <ng-content></ng-content>
