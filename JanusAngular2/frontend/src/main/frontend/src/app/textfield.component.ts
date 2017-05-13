@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { AppComponent }  from './app.component';
+import { AppComponent } from './app.component';
 
 @Component({
   selector: 'app-textfield',
@@ -10,24 +10,24 @@ import { AppComponent }  from './app.component';
                </div> `,
 })
 
-export class TextFieldComponent implements OnInit { 
+export class TextFieldComponent implements OnInit {
 
-  @Input() model = "nn"; 
+  @Input() model = 'nn'
   
-  value = "";
-  wurzel : AppComponent;
+  value = ''
+  wurzel:AppComponent
   
-    constructor(w: AppComponent) {
-    this.wurzel = w;
+    constructor(w: AppComponent) { 
+    this.wurzel = w 
   }
-  
-  ngOnInit(){
-    this.value = this.wurzel[this.model];
+
+  ngOnInit() {
+    this.value = this.wurzel[this.model]
   }
-  
-  update(value: string) { 
-     this.value = value;
-     this.wurzel[this.model] = value;
+
+  update(value: string) {
+     this.value = value
+     this.wurzel[this.model] = value
   }
-  
+
  }

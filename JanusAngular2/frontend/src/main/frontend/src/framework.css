@@ -8,20 +8,13 @@ input:focus {
 }
 
 .hbox {
-     display: -webkit-flex;
-     -webkit-flex-direction: row;
      align-items: center;
-	
 	 display: flex;
      flex-direction: row;
 }
 
 .vbox {
-    display: -webkit-flex;
-      -webkit-flex-direction: column;
-    align-items: flex-start;
-
-	
+     align-items: flex-start;
 	 display: flex;
      flex-direction: column;
 }
