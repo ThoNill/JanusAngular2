@@ -22,36 +22,6 @@
 		</resources>
 
 		<plugins>
-
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.0.2</version>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<!-- here the phase you need -->
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
-							<resources>
-								<resource>
-									<directory>src/main/frontend/src</directory>
-									<includes>
-										<include>metroui/**</include>
-										<include>framework.css</include>
-										<include>metro.js</include>
-									</includes>
-									<filtering>true</filtering>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 			<plugin>
 				<groupId>com.github.eirslett</groupId>
 				<artifactId>frontend-maven-plugin</artifactId>
@@ -68,17 +38,21 @@
 						<id>install node and npm</id>
 						<phase>validate</phase>
 						<goals>
-							<goal>install-node-and-npm</goal>
+						    <goal>install-node-and-npm</goal>
 						</goals>
 					</execution>
 
 					<execution>
-						<id>npm install</id>
+						<id>install Metro UI</id>
 						<phase>validate</phase>
 						<goals>
-							<goal>npm</goal>
+						  <goal>npm</goal>
 						</goals>
+						<configuration>
+							<arguments>install metro-ui</arguments>
+						</configuration>
 					</execution>
+
 
 					<execution>
 						<id>npm run build</id>
