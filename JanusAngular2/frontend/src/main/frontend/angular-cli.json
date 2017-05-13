@@ -18,11 +18,20 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "framework.css",
+ "../node_modules/metro-ui/build/css/metro.css",
+ "../node_modules/metro-ui/build/css/metro-icons.css",
+ "../node_modules/metro-ui/build/css/metro-responsive.css",
+ "../node_modules/metro-ui/build/css/metro-schemes.css"
       ],
-      "scripts": [],
+      "scripts": [
+       "../node_modules/metro-ui/test/RequireJS/scripts/jquery.js",
+       "../node_modules/metro-ui/build/js/metro.js" 
+      ],
+
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
