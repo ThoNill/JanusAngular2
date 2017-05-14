@@ -1,0 +1,4 @@
+#!/bin/bash
+version=$1
+echo pushe Version $version
+docker run -d -p 8888:8888 thonill/janusangular2:$version
