@@ -11,9 +11,10 @@ und an Jeroen Bruinink für seinen Artikel
 
 https://blog.jdriven.com/2016/12/angular2-spring-boot-getting-started/ 
 
-Das Projekt kann auch mit 
+Zum Projekt gibt es auch ein docker image 
 
 docker pull thonill/janusangular2:1.0
+
 docker run -d -p 8888:8888 thonill/janusangular2:1.0
 
 und im Firefox http://localhost:8888
