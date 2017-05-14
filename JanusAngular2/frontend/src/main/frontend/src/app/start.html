@@ -34,11 +34,6 @@
 
 <app-button model='speichernClearFields' title='Speichern' ></app-button>
 
-<!-- 
-	Das ist ein Text
-	<input [(ngModel)]='title' />
--->
-
 	<app-vbox>
 
 <app-label title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></app-label>
@@ -72,28 +67,30 @@
 	 <app-list model="firstMap" ></app-list>
 	 <app-radio model="firstMap" ></app-radio>
 	</app-hbox>
-	<!-- 
-		<app-hbox>
-			<app-label title='eins'></app-label>
-			<app-textfield model='ort' value='1'></app-textfield>
-            {{ort}}
-            {{o}}
-			<app-label title='zwei'></app-label>
-			{{username}}
-		</app-hbox>
+	
 	
 
  	
 	<app-tabs>
-			<app-tab title='Tab a'>
-				<app-textfield model='o' value="1"></app-textfield>
-			</app-tab>
-			<app-tab title='Tab b'>
-			<app-label title='zwei'></app-label>
+		<app-tab title='Tab a'>
+			<app-textfield model='o' value="1"></app-textfield>
+		</app-tab>
+		<app-tab title='Tab b'>
+				<app-label title='zwei'></app-label>
 
-			</app-tab>
-		</app-tabs>
-	-->
+		</app-tab>
+		<app-tab title='Tab c'>
+                	<app-hbox>
+			        <app-label title='eins'></app-label>
+			         <app-textfield model='ort' value='1'></app-textfield>
+            {{ort}}
+            {{o}}
+			        <app-label title='zwei'></app-label>
+			{{username}}
+		    </app-hbox>
+		</app-tab>
+	</app-tabs>
+	
 	
 	</app-vbox>
 			
