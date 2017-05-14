@@ -1,7 +1,7 @@
 JanusAngular2
 =====
 
-Testprojekt zur Verbindung zwischen SpringBoot un Angular2
+Testprojekt zur Verbindung zwischen SpringBoot und Angular2
 
 Vielen Dank an das Team um MetroUI
 
