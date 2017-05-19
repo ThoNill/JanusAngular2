@@ -1,0 +1,30 @@
+<app-dialog title="Maps" >
+
+<app-maptable name="firstMap" >
+  <app-entry value="1" text="eins"> </app-entry>
+  <app-entry value="2" text="zwei"> </app-entry>
+  <app-entry value="3" text="drei"> </app-entry>
+</app-maptable>
+
+	<app-vbox>
+<!-- <app-label title='Aktuelle Position der nachfolgenden Tabelle = {{firstMap.currentPosition|async}}'></app-label>
+<app-label title='Zeilenzahl= {{firstMap.rowCount|async}}'></app-label>
+<app-label title='Wert = {{firstMap.value|async}} '></app-label>
+	-->		
+			
+<app-showtable model="firstMap"  >
+  <app-column name="value" header="Wert" ></app-column>
+  <app-column name="text" header="Text" ></app-column>
+</app-showtable>
+
+
+	<app-hbox>
+	 <app-combo model="firstMap" ></app-combo>
+	 <app-list model="firstMap" ></app-list>
+	 <app-radio model="firstMap" ></app-radio>
+	</app-hbox>
+	
+	
+	</app-vbox>
+			
+</app-dialog>

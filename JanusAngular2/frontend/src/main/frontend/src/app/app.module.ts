@@ -27,12 +27,22 @@ import { MutableComponent } from './mutable/mutable.component';
 import { ColumnComponent } from './column/column.component';
 import { MucolumnComponent } from './mucolumn/mucolumn.component';
 
+import { TabsPageComponent }     from './pages/tabs.page.component';
+import { TextfieldPageComponent }     from './pages/textfield.page.component';
+import { NichtDefiniertPageComponent }     from './pages/nichtDefiniert.page.component';
+import { BitteMenuAuswahlPageComponent } from './pages/bitteMenuAuswahl.page.component';
+import { TabellenPageComponent }     from './pages/tabellen.page.component';
+import { MaptablePageComponent }     from './pages/maptable.page.component';
+     
+  
+
 import { AbfrageService }  from './abfrage.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule ],
-  declarations: [ AppComponent, TabsComponent, TabComponent, RadioComponent, ListComponent, ComboComponent, MaptableComponent, EntryComponent, StringComponent, ButtonComponent, MenubarComponent,  MenuComponent, MenuitemComponent,  VBoxComponent, HBoxComponent, LabelComponent, TextFieldComponent, DialogComponent, ShowtableComponent, MutableComponent, ColumnComponent, MucolumnComponent ],
+  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
+  declarations: [ AppComponent, MaptablePageComponent,TabellenPageComponent, BitteMenuAuswahlPageComponent, NichtDefiniertPageComponent, TextfieldPageComponent, TabsPageComponent, TabsComponent, TabComponent, RadioComponent, ListComponent, ComboComponent, MaptableComponent, EntryComponent, StringComponent, ButtonComponent, MenubarComponent,  MenuComponent, MenuitemComponent,  VBoxComponent, HBoxComponent, LabelComponent, TextFieldComponent, DialogComponent, ShowtableComponent, MutableComponent, ColumnComponent, MucolumnComponent ],
    providers: [ AbfrageService] ,
   bootstrap:    [ AppComponent ]
 })

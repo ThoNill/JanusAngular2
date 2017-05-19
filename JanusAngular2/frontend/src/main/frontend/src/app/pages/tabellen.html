@@ -1,0 +1,38 @@
+<app-dialog title="Tabellen" >
+
+<app-mutable name="abfrage" abfrageText="api/mfisher/bookmarks/" >
+  <app-mucolumn name="id" ></app-mucolumn>
+  <app-mucolumn name="uri" ></app-mucolumn>
+  <app-mucolumn name="description" ></app-mucolumn>
+</app-mutable>
+
+
+<app-mutable name="abfrage2" abfrageText="api/mfisher/testlisten?feldliste=name,strasse" >
+  <app-mucolumn name="name" ></app-mucolumn>
+  <app-mucolumn name="strasse" ></app-mucolumn>
+</app-mutable>
+
+
+	<app-vbox>
+<!-- 
+<app-label title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></app-label>
+<app-label title='Zeilenzahl = {{abfrage2.rowCount|async}}'></app-label>
+<app-label title='Name = {{abfrage2.name|async}}'></app-label>
+-->
+
+<app-showtable model="abfrage2"  >
+  <app-column name="name" header="Name" ></app-column>
+  <app-column name="strasse" header="Strasse" ></app-column>
+</app-showtable>
+
+ 
+<app-showtable model="abfrage"  >
+  <app-column name="id" header="Id" ></app-column>
+  <app-column name="uri" header="Uri" ></app-column>
+  <app-column name="description" header="Beschreibung"></app-column>
+</app-showtable>
+
+	</app-vbox>
+
+			
+</app-dialog>

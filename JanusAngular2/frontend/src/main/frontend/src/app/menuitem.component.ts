@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
 
+
 @Component({
   selector: 'app-menuitem',
   template: `<li   style='{{styleOut}}' ><a href='#' (click)="followLink()" >{{title}}</a></li>`,
@@ -16,7 +17,7 @@ export class MenuitemComponent  {
    
    wurzel : AppComponent;
     
-   constructor(w: AppComponent) {
+   constructor(   w: AppComponent) {
     this.wurzel = w;
    }
    

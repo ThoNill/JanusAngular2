@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule, Router }  from '@angular/router';
+
 
 @Component({
   selector: 'my-app',
-  templateUrl : "start.html",
+  templateUrl : "./pages/start.html",
 })
 
 export class AppComponent  { 
@@ -11,9 +13,17 @@ export class AppComponent  {
  username ="kein Name";
  ort = "ort";
  objectId : number = 0;
+
+ router: Router;
+
+ constructor( r : Router) {
+     this.router = r;
+      this.router.navigate(['/menuAuswahl']);
+ }
  
  performCommand(command : String) {
-     alert(command);
+   //  alert(command);
+      this.router.navigate(['/' + command]);
  }
  
  neueId() : number {
