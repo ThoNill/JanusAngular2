@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { AppComponent }  from './app.component';
+import { DialogComponent }  from './dialog.component';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Observer} from 'rxjs/Observer';
+import  'rxjs/add/observable/of';
+import {Observable} from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-string',
@@ -12,20 +17,26 @@ export class StringComponent implements OnInit {
   @Input() name = "nn"; 
   @Input('default') defValue = "";
   
-  value = "";
-  wurzel : AppComponent;
+  private valueSubject : BehaviorSubject<string>;
+  public value : Observable<string>;
+  wurzel : DialogComponent;
   
-  constructor(w: AppComponent) {
+  constructor(w: DialogComponent) {
     this.wurzel = w;
+    //this.valueSubject = new BehaviorSubject('');
   }
   
   ngOnInit(){
-    this.wurzel[this.name] = this.defValue;
+  
+    this.valueSubject = new BehaviorSubject(this.defValue);
+    this.value = this.valueSubject.asObservable()
+  
+    this.wurzel.setReferenz(this.name,this);
+    
   }
   
   update(value: string) { 
-     this.value = value;
-     this.wurzel[this.name] = value;
-  }
+     this.valueSubject.next(value);
+   }
   
  }

@@ -8,7 +8,14 @@ import { LabelComponent }  from './label.component';
 import { DialogComponent }  from './dialog.component';
 import { VBoxComponent }  from './vbox.component';
 import { HBoxComponent }  from './hbox.component';
+import { GlueComponent }  from './glue.component';
+
 import { TextFieldComponent }  from './textfield.component';
+import { IntegerFieldComponent }  from './integerfield.component';
+import { DateFieldComponent }  from './datefield.component';
+import { MoneyFieldComponent }  from './moneyfield.component';
+import { PasswordComponent }  from './password.component';
+
 
 import { MenubarComponent }  from './menubar.component';
 import { MenuComponent }  from './menu.component';
@@ -27,6 +34,9 @@ import { MutableComponent } from './mutable/mutable.component';
 import { ColumnComponent } from './column/column.component';
 import { MucolumnComponent } from './mucolumn/mucolumn.component';
 
+import { DialogLabelDirective} from './dialoglabel.directive';
+
+
 import { TabsPageComponent }     from './pages/tabs.page.component';
 import { TextfieldPageComponent }     from './pages/textfield.page.component';
 import { NichtDefiniertPageComponent }     from './pages/nichtDefiniert.page.component';
@@ -42,7 +52,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
-  declarations: [ AppComponent, MaptablePageComponent,TabellenPageComponent, BitteMenuAuswahlPageComponent, NichtDefiniertPageComponent, TextfieldPageComponent, TabsPageComponent, TabsComponent, TabComponent, RadioComponent, ListComponent, ComboComponent, MaptableComponent, EntryComponent, StringComponent, ButtonComponent, MenubarComponent,  MenuComponent, MenuitemComponent,  VBoxComponent, HBoxComponent, LabelComponent, TextFieldComponent, DialogComponent, ShowtableComponent, MutableComponent, ColumnComponent, MucolumnComponent ],
+  declarations: [ DialogLabelDirective, AppComponent, MaptablePageComponent,TabellenPageComponent, BitteMenuAuswahlPageComponent, NichtDefiniertPageComponent, TextfieldPageComponent, TabsPageComponent, 
+                  TabsComponent, TabComponent, 
+                  RadioComponent, ListComponent, ComboComponent, 
+                  MaptableComponent, EntryComponent, StringComponent, 
+                  ButtonComponent, MenubarComponent,  MenuComponent, MenuitemComponent,  
+                  VBoxComponent, HBoxComponent, GlueComponent,
+                  LabelComponent, TextFieldComponent, PasswordComponent, MoneyFieldComponent,IntegerFieldComponent, DateFieldComponent, DialogComponent, ShowtableComponent, MutableComponent, ColumnComponent, MucolumnComponent ],
    providers: [ AbfrageService] ,
   bootstrap:    [ AppComponent ]
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { AbfrageService }  from '../abfrage.service';
 import { MucolumnComponent } from '../mucolumn/mucolumn.component';
-import { AppComponent }  from '../app.component';
+import { DialogComponent }  from '../dialog.component';
 import { TableItem }  from '../TableItem';
 import { TableDataBasis }  from '../TableDataBasis';
 import { TableColumnDescription}  from '../TableColumnDescription';
@@ -20,9 +20,9 @@ export class MutableComponent extends TableDataBasis {
   private service:AbfrageService;
   
   
-  wurzel : AppComponent;
+  wurzel : DialogComponent;
   
-  constructor(w: AppComponent,s:AbfrageService) {
+  constructor(w: DialogComponent,s:AbfrageService) {
   	super(w);
   	this.service = s;
   }

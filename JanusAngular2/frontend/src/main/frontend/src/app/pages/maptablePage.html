@@ -1,4 +1,4 @@
-<app-dialog title="Maps" >
+<app-dialog name="maptable" title="Maps" >
 
 <app-maptable name="firstMap" >
   <app-entry value="1" text="eins"> </app-entry>
@@ -7,10 +7,30 @@
 </app-maptable>
 
 	<app-vbox>
-<!-- <app-label title='Aktuelle Position der nachfolgenden Tabelle = {{firstMap.currentPosition|async}}'></app-label>
-<app-label title='Zeilenzahl= {{firstMap.rowCount|async}}'></app-label>
-<app-label title='Wert = {{firstMap.value|async}} '></app-label>
-	-->		
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Aktuelle Position der nachfolgenden Tabelle = {{dialog.firstMap.currentPosition|async}}
+ </template>
+ </app-label>
+
+  <div *dialogLabel >
+   Aktuelle Position der nachfolgenden Tabelle = {{dialog.firstMap.currentPosition|async}}
+  </div>
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Zeilenzahl= {{dialog.firstMap.rowCount|async}}
+ </template>
+ </app-label>
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Wert = {{dialog.firstMap.value|async}}
+ </template>
+ </app-label>
+
+		
 			
 <app-showtable model="firstMap"  >
   <app-column name="value" header="Wert" ></app-column>

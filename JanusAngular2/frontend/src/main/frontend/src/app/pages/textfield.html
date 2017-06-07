@@ -1,10 +1,19 @@
-<app-dialog title="Ein Textfeld" >
+<app-dialog name="textfield" title="Ein Textfeld" >
 
-<app-string name="o" default="ein Text"></app-string>
+<app-string name="text" default="ein Text"></app-string>
+<app-string name="zahl" default="1"></app-string>
+<app-string name="datum" default="30.01.1962"></app-string>
 
 	<app-vbox>
  	
-			<app-textfield model='o' value="1"></app-textfield>
+			<app-textfield model='text' ></app-textfield>
+			<app-textfield model='text' ></app-textfield>
+		
+			<app-integerfield model='zahl' ></app-integerfield>
+			<app-datefield model='datum' ></app-datefield>
+		
+		
+		<app-password model='text' ></app-password>
 			
 	</app-vbox>
 			

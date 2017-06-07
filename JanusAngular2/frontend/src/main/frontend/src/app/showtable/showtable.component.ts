@@ -4,6 +4,7 @@ import { AbfrageService }  from '../abfrage.service';
 import {Observable} from 'rxjs/Rx';
 import { ColumnComponent } from '../column/column.component';
 import { AppComponent } from '../app.component';
+import { DialogComponent }  from '../dialog.component';
 import { MutableComponent } from '../mutable/mutable.component';
 import { TableViewBasis }  from '../TableViewBasis';
 import { TableItem }  from '../TableItem';
@@ -18,9 +19,9 @@ export class ShowtableComponent extends TableViewBasis {
 
   private listOfColumns : ColumnComponent[] = [];
  // currentPosition = 0;
- // wurzel : AppComponent;
+ // wurzel : DialogComponent;
 
-  constructor(w : AppComponent) {
+  constructor(w : DialogComponent) {
   	super(w);
   }
   
@@ -56,7 +57,7 @@ export class ShowtableComponent extends TableViewBasis {
   }
   
   getModel()  : MutableComponent {
-   	return this.wurzel[this.model];
+   	return this.wurzel.getReferenz(this.model);
   }
   
   ngOnInit() {

@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import {
+    Input,
+    Component,
+    Directive,
+    ViewContainerRef,
+    ComponentRef,
+    TemplateRef,
+    ContentChild,
+    AfterViewInit,
+    ElementRef,
+    OnInit,
+    OnChanges, NgModule} from "@angular/core";
+import { DialogComponent }  from './dialog.component';
 
 @Component({
   selector: 'app-label',
-  template: "<div class='margin10 no-margin-right ' >{{title}}</div>",
+  template: ` <template [ngTemplateOutlet]="content" [ngOutletContext]="{ 'dialog' : dialog}"> </template>`,
 })
-export class LabelComponent  { 
-
-  @Input() title = ""; 
+export class LabelComponent    { 
+  dialog : DialogComponent;
+ 	
+  @ContentChild('title',{read: TemplateRef}) content : TemplateRef<Object>; 
+  
+   constructor(d: DialogComponent) {
+    this.dialog = d;
+  }
   
  }
+
+ 

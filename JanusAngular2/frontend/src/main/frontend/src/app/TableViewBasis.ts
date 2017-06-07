@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { Output } from '@angular/core';
-import { AppComponent }  from './app.component';
+import { DialogComponent }  from './dialog.component';
 import { TableItem }  from './TableItem';
 import { TableDataBasis }  from './TableDataBasis';
 import {Observer} from 'rxjs/Observer';
@@ -13,12 +13,12 @@ export class TableViewBasis  implements OnInit {
 
   @Input('model') name = ""; 
   model : TableDataBasis;
-  wurzel : AppComponent;
+  wurzel : DialogComponent;
   objectId : number;
 
   children : Observable<TableItem[]>;
   
-  constructor(w: AppComponent) {
+  constructor(w: DialogComponent) {
     this.wurzel = w;
     this.objectId = w.neueId();
   }
@@ -37,7 +37,7 @@ export class TableViewBasis  implements OnInit {
  
    
   ngOnInit(){
-  	this.model = this.wurzel[this.name];
+  	this.model = this.wurzel.getReferenz(this.name);
   	this.children = this.model.children;
   }
   

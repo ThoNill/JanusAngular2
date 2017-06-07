@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { AppComponent }  from './app.component';
+import { DialogComponent }  from './dialog.component';
 import { TableItem }  from './TableItem';
 import { MaptableComponent }  from './maptable.component';
 import { TableViewBasis }  from './TableViewBasis';
@@ -16,7 +17,7 @@ import { TableViewBasis }  from './TableViewBasis';
 
 export class RadioComponent   extends TableViewBasis { 
   
-  constructor(w: AppComponent) {
+  constructor(w: DialogComponent) {
     super(w);
   }
  

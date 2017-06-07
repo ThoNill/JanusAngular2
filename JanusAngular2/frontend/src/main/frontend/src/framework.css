@@ -18,3 +18,7 @@ input:focus {
 	 display: flex;
      flex-direction: column;
 }
+
+.glue {
+     flex: 0 1 auto;
+}

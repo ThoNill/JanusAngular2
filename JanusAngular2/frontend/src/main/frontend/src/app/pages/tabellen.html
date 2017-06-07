@@ -1,4 +1,4 @@
-<app-dialog title="Tabellen" >
+<app-dialog name="tabellen" title="Tabellen" >
 
 <app-mutable name="abfrage" abfrageText="api/mfisher/bookmarks/" >
   <app-mucolumn name="id" ></app-mucolumn>
@@ -14,11 +14,24 @@
 
 
 	<app-vbox>
-<!-- 
-<app-label title='Aktuelle Position der nachfolgenden Tabelle = {{abfrage2.currentPosition|async}}'></app-label>
-<app-label title='Zeilenzahl = {{abfrage2.rowCount|async}}'></app-label>
-<app-label title='Name = {{abfrage2.name|async}}'></app-label>
--->
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Aktuelle Position der nachfolgenden Tabelle = {{dialog.abfrage2.currentPosition|async}}
+ </template>
+ </app-label>
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Zeilenzahl= {{dialog.abfrage2.rowCount|async}}
+ </template>
+ </app-label>
+
+ <app-label >
+  <template #title let-dialog="dialog">
+        	Name = {{dialog.abfrage2.name|async}}
+ </template>
+ </app-label>
 
 <app-showtable model="abfrage2"  >
   <app-column name="name" header="Name" ></app-column>

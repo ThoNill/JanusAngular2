@@ -1,7 +1,11 @@
-<app-dialog title="Bitte aus dem Men&uuml; ausw&auml;hlen" >
+<app-dialog name="bitteMenuAuswahl" title="Bitte aus dem Men&uuml; ausw&auml;hlen" >
 
 	<app-vbox>
- 	    <app-label title='Bitte einen Eintrag im Men&uuml; ausw&auml;hlen'></app-label>
+ 	    <app-label >
+ 	    <template #title let-dialog="dialog" >
+ 	    Bitte einen Eintrag im Men&uuml; ausw&auml;hlen
+        </template>
+ 	</app-label>
 		
 	</app-vbox>
 			

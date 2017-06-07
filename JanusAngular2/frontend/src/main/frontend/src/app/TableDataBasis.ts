@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { AppComponent }  from './app.component';
+import { DialogComponent }  from './dialog.component';
 import { TableItem }  from './TableItem';
 import { TableColumnDescription}  from './TableColumnDescription';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
@@ -15,7 +15,7 @@ import { MucolumnComponent } from './mucolumn/mucolumn.component';
 export class TableDataBasis implements OnInit { 
 
   @Input() name = ""; 
-  protected wurzel : AppComponent;
+  protected wurzel : DialogComponent;
  
   private listOfColumns : TableColumnDescription[] = [];
   
@@ -29,7 +29,7 @@ export class TableDataBasis implements OnInit {
   public children : Observable<TableItem[]>;
   
   
-  constructor(w: AppComponent) {
+  constructor(w: DialogComponent) {
     this.wurzel = w;
     
     this.bsCurrentPosition = new BehaviorSubject(0);
@@ -130,7 +130,8 @@ export class TableDataBasis implements OnInit {
   }
   
   ngOnInit(){
-    this.wurzel[this.name] = this;
+    
+    this.wurzel.setReferenz(this.name,this);
     this.publishChanges();
   }
   
